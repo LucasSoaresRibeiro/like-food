@@ -1,0 +1,32 @@
+Modelo de dados
+
+user
+	location (fk)¹
+	name
+	login
+	password
+	email
+
+evaluation
+	user (fk)¹
+	dish (fk)¹
+	location (fk)¹
+	type [like, dislike]
+	date
+
+location
+	lat
+	long
+
+dish
+	restaurant (fk)¹
+	photo
+	description
+
+restaurant
+	location (fk)¹
+	name
+	description
+	address
+	city
+	state

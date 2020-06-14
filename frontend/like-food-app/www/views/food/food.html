@@ -1,0 +1,36 @@
+<ion-view view-title="Like Food">
+
+  <ion-nav-title>
+    <div class="padding">
+      <img height="30px" src="img/logo.png">
+    </div>
+  </ion-nav-title>
+
+  <ion-nav-buttons side="left">
+   <button menu-toggle="left" class="button button-icon icon ion-navicon"></button>
+  </ion-nav-buttons>
+
+  <ion-pane ng-controller="foodCtrl">
+    <td-cards>
+      <td-card id="td-card" ng-repeat="card in cards" on-destroy="cardDestroyed($index)"
+            on-swipe-left="cardSwipedLeft($index)" on-swipe-right="cardSwipedRight($index)"
+            on-partial-swipe="cardPartialSwipe(amt)">
+
+                <div class="image">
+                  <div class="yes-text overlayBox"><div class="yesBox boxed" id="centerMe">Sim</div></div>
+                    <div class="no-text overlayBox"><div class="noBox boxed">Não</div></div>
+                    <img ng-src="{{card.photo}}">
+                </div>
+
+                <div class="buttondesc">
+                  <div class="dishname">{{card.name}}</div>
+                  <div class="dishdescription">{{card.description}}</div>
+                  <div class="restaurantname"><i class="icon ion-location"></i> {{card.restaurant[0].name}}</div>
+                  <button ng-click="noCard($index)" class="button button-assertive">Não</button>
+                  <button ng-click="yesCard($index)" class="button button-balanced">Sim</button>
+                </div>
+      </td-card>
+    </td-cards>
+  </ion-pane>
+
+</ion-view>

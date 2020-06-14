@@ -1,0 +1,94 @@
+<ion-view view-title="Like Food">
+  <ion-nav-title>
+    <div class="padding">
+      <img height="30px" src="img/logo.png">
+    </div>
+  </ion-nav-title>
+
+  <link href="views/welcome/welcome_style.css" rel="stylesheet">
+
+  <ion-nav-buttons side="left">
+    <!-- <button class="button button-positive button-clear no-animation" ng-click="startApp()" ng-if="!slideIndex">
+      Pular
+    </button> -->
+    <button class="button button-positive button-clear no-animation" ng-click="previous()" ng-if="slideIndex > 0">
+      Anterior
+    </button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right">
+    <button class="button button-positive button-clear no-animation" ng-click="next()" ng-if="slideIndex != 2 && slideIndex != 3">
+      Próximo
+    </button>
+    <button class="button button-positive button-clear no-animation" ng-click="next()" ng-if="slideIndex == 2">
+      Cadastro
+    </button>
+    <button class="button button-positive button-clear no-animation" ng-click="previous()" ng-if="slideIndex == 3">
+      Login
+    </button>
+  </ion-nav-buttons>
+
+  <ion-slide-box on-slide-changed="slideChanged(index)">
+    <ion-slide>
+      <h2>Bem vindo!</h2>
+      <div id="welcome_logo">
+        <img width="65%" src="img/icon.png">
+      </div>
+      <h4>
+        Para os amantes da gastronomia, ou para quem quer experimentar novos sabores... bem vindo ao Like Food!
+      </h4>
+    </ion-slide>
+    <ion-slide>
+      <h2>Veja como funciona</h2>
+      <div id="welcome_list">
+        <h4>Apenas três passos...</h4>
+        <ol>
+          <li>Cadastre-se</li>
+          <li>Curta os pratos</li>
+          <li>Encontre amigos</li>
+        </ol>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <h2>Login</h2>
+      <div id="welcome_form">
+        <form ng-submit="login()">
+            <label class="item item-input">
+              <span class="input-label">Email</span>
+              <input type="text" ng-model="loginData.email">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Senha</span>
+              <input type="password" ng-model="loginData.password">
+            </label>
+            <label class="item">
+              <button class="button button-block button-positive" type="submit">Login</button>
+            </label>
+        </form>
+      </div>
+    </ion-slide>
+    <ion-slide>
+      <h2>Cadastro</h2>
+      <div id="welcome_form">
+        <form ng-submit="join()">
+            <label class="item item-input">
+              <span class="input-label">Nome</span>
+              <input type="text" ng-model="loginData.name">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Email</span>
+              <input type="text" ng-model="loginData.email">
+            </label>
+            <label class="item item-input">
+              <span class="input-label">Senha</span>
+              <input type="password" ng-model="loginData.password">
+            </label>
+            <label class="item">
+              <button class="button button-block button-positive" type="submit">Cadastrar</button>
+            </label>
+        </form>
+      </div>
+    </ion-slide>
+
+  </ion-slide-box>
+
+</ion-view>

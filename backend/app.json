@@ -1,0 +1,8 @@
+{
+  "name": "LikeFood",
+  "description": "The social food app",
+  "repository": "https://github.com/heroku/node-js-getting-started",
+  "logo": "http://likefoodapp.herokuapp.com/like-food-logo.png",
+  "keywords": ["node", "express", "mongodb"],
+  "image": "heroku/nodejs"
+}

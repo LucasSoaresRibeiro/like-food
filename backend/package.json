@@ -1,0 +1,27 @@
+{
+  "name": "LikeFood",
+  "version": "0.1.5",
+  "description": "The social food app",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "mongoose": "4.1.12",
+    "body-parser": "1.14.1",
+    "express": "4.13.3"
+  },
+  "engines": {
+    "node": "0.12.7"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heroku/node-js-getting-started"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "mongodb"
+  ],
+  "license": "MIT"
+}
